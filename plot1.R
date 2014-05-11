@@ -1,0 +1,5 @@
+png(filename = "plot1.png",width = 480,height = 480, units = "px")
+mydata<-read.table("household_power_consumption_selected.txt", header=TRUE, na.strings="?",sep=";")
+par(mar=c(4,4,4,1),ps=12)
+hist(mydata[,"Global_active_power"],col="red",main="Global Active Power",xlab="Global Active Power(kilowatts)",ylab="Frequency")
+dev.copy(png, file="plot1.png")
